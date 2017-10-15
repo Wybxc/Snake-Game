@@ -7,10 +7,10 @@ object MainForm: TMainForm
   ClientWidth = 506
   Color = clBlack
   DoubleBuffered = True
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'Tahoma'
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWhite
+  Font.Height = -16
+  Font.Name = 'TeXGyreCursor'
   Font.Style = []
   Icon.Data = {
     0000010006000000000001002000282004006600000010100000010020006804
@@ -11585,25 +11585,17 @@ object MainForm: TMainForm
   OnKeyDown = FormKeyDown
   OnPaint = FormPaint
   PixelsPerInch = 96
-  TextHeight = 13
-  object lblLoading: TLabel
-    Left = 43
-    Top = 191
-    Width = 420
-    Height = 59
-    Caption = 'Loading...'
-    Font.Charset = ANSI_CHARSET
-    Font.Color = clWhite
-    Font.Height = -56
-    Font.Name = 'OCR A Std'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
+  TextHeight = 20
   object tmrStep: TTimer
     Enabled = False
     Interval = 200
     OnTimer = tmrStepTimer
-    Left = 16
+    Left = 462
+    Top = 16
+  end
+  object tmrFPS: TTimer
+    OnTimer = tmrFPSTimer
+    Left = 430
     Top = 16
   end
 end
